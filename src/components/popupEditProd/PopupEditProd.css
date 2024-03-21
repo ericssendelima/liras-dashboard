@@ -1,0 +1,164 @@
+div#PopupEditProdContainer {
+  border: 1px solid rgba(0, 0, 0, 0.249);
+  border-radius: 15px;
+  height: 425px;
+  width: 350px;
+  position: fixed;
+  top: 90px;
+  right: 13px;
+  background-color: white;
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+  z-index: 1;
+
+  background-color: #121621;
+
+  
+}
+
+div#headerPopupAddProd {
+  display: flex;
+  justify-content: center;
+  margin: 0 5px 0 10px;
+  color: white
+}
+
+button#fecharPopupAddProd {
+  background-color: transparent;
+  border: none;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  font-size: 30px;
+  border-radius: 50%;
+  height: 40px;
+  width: 40x;
+  position: absolute;
+  top: 5px;
+  right: 5px;
+  color: rgb(255, 255, 255);
+
+
+  &:active {
+    cursor: pointer;
+    background-color: #948eff;
+  }
+
+  @media (min-width: 438px) {
+    &:hover {
+      background-color: #ccc9f5;
+      cursor: pointer;
+  color: rgb(18, 22, 33);
+    }
+    &:active {
+      cursor: pointer;
+      background-color: #635bff;
+    }
+  }
+}
+
+div#prodInfoContainer {
+  height: 80%;
+  border: 1px solid rgba(0, 0, 0, 0.249);
+  margin: 2px 10px 10px 10px;
+  border-radius: 15px;
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+  padding: 10px;
+  background-color: white;
+}
+
+div#prodInfoContainer label {
+  display: flex;
+  flex-direction: column;
+  margin: 5px;
+  font-weight: bold;
+}
+
+div#prodInfoContainer input,
+select {
+  margin-top: 8px;
+  /* border-radius: 5px; */
+  box-sizing: border-box;
+  border: none;
+  border: 1px solid rgba(0, 0, 0, 0.249);
+  border-radius: 5px;
+  /* border-bottom: 1px solid rgba(0, 0, 0, 0.249); */
+  outline: 0;
+  height: 30px;
+  padding-left: 5px;
+}
+
+
+div#two {
+  /* background-color: blueviolet; */
+  display: flex;
+  justify-content: space-between;
+}
+
+
+
+div#three {
+  display: flex;
+  /* background-color: rgb(226, 223, 43); */
+  justify-content: space-between;
+
+}
+
+div#three input, select, div#two input, select{
+    width: 130px;
+}
+
+div#four {
+  display: flex;
+  justify-content: space-between;
+  /* background-color: rgb(226, 43, 43); */
+}
+
+div#four button {
+  border-radius: 5px;
+  border: none;
+  height: 30px;
+  width: 120px;
+  font-weight: bold;
+  font-size: 16px;
+}
+
+button#confirmAddProd {
+  background-color: #635bff;
+  color: white;
+  &:active {
+    cursor: pointer;
+    background-color: #948eff;
+  }
+
+  @media (min-width: 438px) {
+    &:hover {
+      background-color: #ccc9f5;
+      cursor: pointer;
+      color: black
+    }
+    &:active {
+      cursor: pointer;
+      background-color: #635bff;
+    }
+  }
+}
+
+button#cancelAddProd{
+    &:active {
+        cursor: pointer;
+        background-color: #948eff;
+      }
+    
+      @media (min-width: 438px) {
+        &:hover {
+          background-color: #ccc9f5;
+          cursor: pointer;
+          color: black
+        }
+       
+      }
+}

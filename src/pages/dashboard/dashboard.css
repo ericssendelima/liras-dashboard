@@ -1,0 +1,20 @@
+div#dashboardContainer{
+    background-color: aliceblue;
+    width: 100%;
+    height: auto;
+    min-height: 100vh;
+    /* position: relative; */
+    display: flex;
+    /* flex-direction: column; */
+}
+
+div#bodyDash{
+    /* background-color: cadetblue; */
+    width: 100%;
+}
+
+div#painelBodyDash{
+    /* background-color: blanchedalmond; */
+    height: auto;
+    padding-top: 20px;
+}

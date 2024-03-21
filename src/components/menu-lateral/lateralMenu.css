@@ -1,0 +1,147 @@
+div#lateralMenuAberto {
+  background-color: #121621;
+  height: auto;
+  overflow: visible;
+  width: 140px;
+  transition: 0.4s;
+  display: flex;
+  align-items: flex-start;
+  justify-content: flex-start;
+  position: relative;
+  /* position: absolute;
+  top:0;
+  left: 0; */
+}
+
+div#lateralMenuFechado {
+  background-color: #121621;
+  height: auto;
+  overflow: visible;
+  width: 80px;
+  transition: 0.4s;
+  display: flex;
+  align-items: flex-start;
+  justify-content: flex-end;
+  position: relative;
+  /* position: absolute;
+  top:0;
+  left: 0; */
+
+  @media (max-width: 500px) {
+    position: absolute;
+    left: -80px;
+    transition: -1s;
+  }
+}
+
+div#containerBMenu {
+  /* background-color: blue; */
+  position: absolute;
+  top: 10px;
+  width: 100%;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  height: 50px;
+  transition: 0.4s;
+}
+
+img {
+  width: 70px;
+  object-fit: scale-down; /* height: 42px; */
+  /* margin-left: 5px; */
+}
+
+div#containerOptions {
+  /* background-color: blueviolet; */
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: space-around;
+  width: 95%;
+  height: 150px;
+  margin-top: 80px;
+}
+
+button#bPedidos {
+  background-color: transparent;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+
+  border: none;
+  width: 91%;
+  color: white;
+  font-size: 30px;
+  margin-right: 5px;
+  height: 50px;
+  margin-left: 2px;
+
+  @media (min-width: 438px) {
+    &:hover {
+      background-color: rgb(255, 255, 255, 0.1);
+
+      cursor: pointer;
+      border-radius: 10px;
+    }
+  }
+
+  &:active {
+    cursor: pointer;
+    background-color: #635bff;
+    border-radius: 10px;
+  }
+}
+
+button#bPedidosAtivo {
+  background-color: #635bff;
+  border-radius: 10px;
+
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  border: none;
+  width: 91%;
+  color: white;
+  font-size: 30px;
+  margin-right: 5px;
+  margin-left: 2px;
+
+  height: 50px;
+}
+
+span#pedidos {
+  font-size: 55%;
+  transition: 0.4s;
+  margin-left: 5px;
+}
+
+button#subirPage {
+  position: fixed;
+  bottom: 10px;
+  left: 8px;
+  width: 45px;
+  height: 45px;
+  border-radius: 50%;
+  font-size: 22px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  background-color: #635bff;
+  color: white;
+  border: none;
+
+  @media (min-width: 438px) {
+    &:hover {
+      background-color: #a9a5ff;
+
+      cursor: pointer;
+    }
+  }
+
+  &:active {
+    background-color: #a9a5ff;
+
+    cursor: pointer;
+  }
+}

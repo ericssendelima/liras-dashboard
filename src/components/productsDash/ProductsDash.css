@@ -1,0 +1,170 @@
+div#ProductsDashContainer {
+  /* background-color: rgb(77, 152, 115); */
+  height: 85%;
+}
+
+div#headerProdsDash {
+  /* background-color: aquamarine; */
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  margin: 0 20px 0 20px
+}
+
+button#addProd{
+  background-color: #635bff;
+  color: white;
+  font-size: 18px;
+  font-weight: bold;
+  border: none;
+  height: 50px;
+  width: 100px;
+  border-radius: 10px;
+  &:active {
+    cursor: pointer;
+    background-color: #948eff;
+  }
+
+  @media (min-width: 438px) {
+    &:hover {
+      background-color: #948eff;
+
+      cursor: pointer;
+    }
+    &:active {
+      cursor: pointer;
+      background-color: #635bff;
+    }
+  }
+}
+
+ul {
+  list-style: none;
+  padding: 0;
+  font-weight: bold;
+}
+
+div#titulosTable {
+  /* background-color: #635bff; */
+  background-color: #121621;
+
+  color: rgb(255, 255, 255);
+  position: sticky;
+  top: 0;
+  height: 30px;
+  font-weight: bold;
+  font-size: 18px;
+  border: 1px solid rgba(0, 0, 0, 0.111);
+}
+
+
+
+li.lista {
+  /* background-color: rgb(178, 178, 249); */
+  background-color: #ffffff;
+
+  display: flex;
+  flex-direction: row;
+  align-items: center;
+  justify-content: space-around;
+  /* margin-top: 2px; */
+  width: 100%;
+  height: 145px;
+  border-bottom: 1px solid rgba(0, 0, 0, 0.111);
+}
+
+div#c1 {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  /* background-color: bisque; */
+  width: 30%;
+  word-break: break-word;
+}
+div#c2 {
+  /* background-color: rgb(196, 255, 200); */
+  background-color: rgb(229, 237, 231);
+  border-radius: 10px;
+  height: 125px;
+  width: 20%;
+  display: flex;
+  word-break: break-word;
+  align-items: center;
+  justify-content: center;
+}
+
+div#c2 img {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  object-fit: scale-down;
+  max-height: 95px;
+}
+
+div#c3 {
+  /* background-color: rgb(19, 227, 255); */
+  width: 10%;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+div#c4 {
+  /* background-color: rgb(62, 255, 19); */
+  width: 10%;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+div#c5 {
+  /* background-color: rgb(117, 19, 255); */
+  width: 5%;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+div#c6 {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: space-around;
+  /* background-color: rgb(255, 0, 0); */
+  width: 5%;
+  height: 60%;
+  margin-right: 8px;
+}
+
+div#expoProds {
+  /* background-color: burlywood; */
+  width: 100%;
+  padding: 0;
+}
+
+button#actButtons {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  font-size: 25px;
+  background-color: transparent;
+  border: none;
+  width: 35px;
+  height: 35px;
+  &:active {
+    cursor: pointer;
+    background-color: #cfd5ec;
+    border-radius: 50%;
+  }
+
+  @media (min-width: 438px) {
+    &:hover {
+      background-color: #cfd5ec;
+      border-radius: 50%;
+
+      cursor: pointer;
+    }
+    &:active {
+      cursor: pointer;
+      background-color: #eaeaec;
+      border-radius: 50%;
+    }
+  }
+}

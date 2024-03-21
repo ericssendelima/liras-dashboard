@@ -1,0 +1,172 @@
+div#loginContainer {
+  background-color: rgb(255, 255, 255);
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: space-between;
+  height: 450px;
+  width: 80%;
+  border-radius: 10px;
+
+  @media (min-width: 542px) {
+    width: 345px;
+  }
+
+  @media (max-height: 470px) {
+    height: 80%;
+  }
+}
+
+div#topLogin {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  width: 90%;
+  background-color: rgb(91, 165, 167);
+  background-image: url(../../images/Nova_logo_lira_s-removebg-preview.png);
+  background-size: 70%;
+  background-position: center;
+  background-repeat: no-repeat;
+  border: none;
+  height: 135px;
+  color: white;
+  font-weight: bold;
+  font-size: 15px;
+  border-radius: 7px;
+  margin-top: 15px;
+  box-shadow: rgba(50, 50, 93, 0.25) 0px 13px 27px -5px,
+    rgba(0, 0, 0, 0.3) 0px 8px 16px -8px;
+
+    @media (min-width: 291px) {
+        background-size: 150px;
+
+      }
+}
+
+div#formLogin {
+  /* background-color: aqua; */
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  width: 90%;
+  height: 140px;
+  justify-content: space-around;
+}
+
+div#formLogin input {
+  width: 100%;
+  box-sizing: border-box;
+  height: 48px;
+  border-radius: 7px;
+  border: 1px solid rgba(0, 0, 0, 0.3);
+  padding-left: 10px;
+}
+
+div#lembrar {
+  /* background-color: aqua; */
+  width: 90%;
+  margin-bottom: 10px;
+  display: flex;
+  align-items: center;
+  justify-content: flex-start;
+
+}
+
+span#lembrar{
+    margin-left: 10px;
+    font-weight: bold;
+    color: rgb(52, 92, 93)
+  }
+
+button#entrar {
+  width: 90%;
+  background-color: rgb(91, 165, 167);
+  border: none;
+  height: 45px;
+  color: white;
+  font-weight: bold;
+  font-size: 15px;
+  border-radius: 7px;
+  margin-bottom: 15px;
+  box-shadow: rgba(50, 50, 93, 0.25) 0px 13px 27px -5px,
+    rgba(0, 0, 0, 0.3) 0px 8px 16px -8px;
+
+  &:active {
+    background-color: rgb(68, 128, 130);
+    cursor: pointer;
+    box-shadow: rgba(0, 0, 0, 0.35) 0px 5px 10px;
+  }
+
+  @media (min-width: 542px) {
+    &:hover {
+      background-color: rgb(68, 128, 130);
+      cursor: pointer;
+    }
+
+    &:active {
+      background-color: rgb(91, 165, 167);
+      cursor: pointer;
+      box-shadow: rgba(0, 0, 0, 0.35) 0px 5px 15px;
+    }
+  }
+}
+
+.switch {
+  position: relative;
+  display: inline-block;
+  width: 53px;
+  height: 25px;
+}
+
+.switch input {
+  opacity: 0;
+  width: 0;
+  height: 0;
+}
+
+.slider {
+  position: absolute;
+  cursor: pointer;
+  top: 0;
+  left: 0;
+  right: 0;
+  bottom: 0;
+  background-color: #ccc;
+  -webkit-transition: 0.4s;
+  transition: 0.4s;
+}
+
+.slider:before {
+  position: absolute;
+  content: "";
+  height: 18px;
+  width: 18px;
+  left: 4px;
+  bottom: 4px;
+  background-color: white;
+  -webkit-transition: 0.4s;
+  transition: 0.4s;
+}
+
+input:checked + .slider {
+  background-color: rgb(91, 165, 167);
+}
+
+input:focus + .slider {
+  box-shadow: 0 0 1px rgb(91, 165, 167);
+}
+
+input:checked + .slider:before {
+  -webkit-transform: translateX(26px);
+  -ms-transform: translateX(26px);
+  transform: translateX(26px);
+}
+
+/* Rounded sliders */
+.slider.round {
+  border-radius: 34px;
+}
+
+.slider.round:before {
+  border-radius: 50%;
+}
