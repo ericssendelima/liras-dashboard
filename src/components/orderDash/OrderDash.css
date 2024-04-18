@@ -1,0 +1,18 @@
+div#OrderDashContainer {
+    background-color: rgb(77, 78, 152);
+    height: 300px;
+  }
+  
+  div#headerOrdersDash {
+    background-color: aquamarine;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    margin: 0 20px 0 20px
+  }
+
+div#expoOrders {
+    background-color: burlywood;
+    width: 100%;
+    padding: 0;
+  }

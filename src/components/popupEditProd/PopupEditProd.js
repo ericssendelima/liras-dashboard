@@ -6,18 +6,24 @@ import { IoClose } from "react-icons/io5";
 import { ref, set, update } from "firebase/database";
 import { db } from "../../firebase/config";
 
-
 const PopupEditProd = ({ setIsAdding, prodAtual, isEditing, setIsEditing }) => {
+  const [name, setName] = useState(isEditing ? prodAtual.name : "");
+  const [image, setImage] = useState(isEditing ? prodAtual.image : "");
+  const [preco, setPreco] = useState(isEditing ? prodAtual.preco : "");
+  const [estoque, setEstoque] = useState(isEditing ? prodAtual.estoque : "");
+  const [pPago, setPPago] = useState(isEditing ? prodAtual.pPago : "");
+  const [id, setId] = useState(isEditing ? prodAtual.id : "");
+  const [prodTotal, setProdTotal] = useState(
+    isEditing ? prodAtual.prodTotal : ""
+  );
+  const [descricao, setDescricao] = useState(
+    isEditing ? prodAtual.descricao : ""
+  );
+  const [categoria, setCategoria] = useState(
+    isEditing ? prodAtual.categoria : ""
+  );
 
-  const [name, setName] = useState(isEditing?prodAtual.name:"");
-  const [image, setImage] = useState(isEditing?prodAtual.image:"");
-  const [preco, setPreco] = useState(isEditing?prodAtual.preco:"");
-  const [estoque, setEstoque] = useState(isEditing?prodAtual.estoque:"");
-  const [pPago, setPPago] = useState(isEditing?prodAtual.pPago:"");
-  const [id, setId] = useState(isEditing?prodAtual.id:"");
-  const [prodTotal, setProdTotal] = useState(isEditing?prodAtual.prodTotal:"");
   const quantidade = 1;
-
 
   const fechar = () => {
     setIsAdding(false);
@@ -29,6 +35,8 @@ const PopupEditProd = ({ setIsAdding, prodAtual, isEditing, setIsEditing }) => {
     setPPago("");
     setImage("");
     setProdTotal("");
+    setDescricao("");
+    setCategoria("");
   };
 
   const confirmAddProd = () => {
@@ -43,6 +51,8 @@ const PopupEditProd = ({ setIsAdding, prodAtual, isEditing, setIsEditing }) => {
       pPago,
       prodTotal: preco,
       estoque,
+      categoria,
+      descricao,
     }).catch((err) => alert("Acesso não permitido"));
 
     window.scrollTo({
@@ -51,7 +61,6 @@ const PopupEditProd = ({ setIsAdding, prodAtual, isEditing, setIsEditing }) => {
       behavior: "instant",
     });
     fechar();
-
   };
 
   const confirmEditProd = () => {
@@ -64,11 +73,11 @@ const PopupEditProd = ({ setIsAdding, prodAtual, isEditing, setIsEditing }) => {
       image,
       prodTotal,
       quantidade,
+      categoria,
+      descricao,
     }).catch((err) => alert("Acesso não permitido"));
     fechar();
   };
-
-  
 
   return (
     <div id="PopupEditProdContainer">
@@ -138,12 +147,31 @@ const PopupEditProd = ({ setIsAdding, prodAtual, isEditing, setIsEditing }) => {
           </label>
           <label>
             Categoria
-            <select>
-              <option>Selecione a categoria</option>
-              <option>Categoria 01</option>
-              <option>Categoria 02</option>
-              <option>Categoria 03</option>
+            <select value={categoria} onChange={(e)=>setCategoria(e.target.value)}>
+              <option value="">Selecione a categoria</option>
+              <option value="Hidratante facial">Hidratante facial</option>
+              <option value="Limpeza facial">Limpeza facial</option>
+              <option value="Sabonete facial">Sabonete facial</option>
+              <option value="Gel facial">Gel facial</option>
+              <option value="Sérum">Sérum</option>
+              <option value="Protetor solar">Protetor solar</option>
+              <option value="Argila">Argila</option>
+              <option value="Máscara facial">Máscara facial</option>
+              <option value="Sobrancelhas">Sobrancelhas</option>
+              <option value="Acessórios">Acessórios</option>
+              <option value="Maquiagem">Maquiagem</option>
+              <option value="MãosEPés">Mãos e Pés</option>
+              <option value="Escova">Escova</option>
             </select>
+          </label>
+        </div>
+        <div id="threedotfive">
+          <label>
+            Descrição
+            <textarea
+              value={descricao}
+              onChange={(e) => setDescricao(e.target.value)}
+            ></textarea>
           </label>
         </div>
         <div id="four">
