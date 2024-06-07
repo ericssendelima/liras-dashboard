@@ -14,6 +14,7 @@ import { BsFillImageFill } from "react-icons/bs";
 
 import PopupEditProd from "../popupEditProd/PopupEditProd";
 import PopupBin from "../popupBin/PopupBin";
+import 'dotenv/config';
 
 const ProductsDash = () => {
   
@@ -33,7 +34,7 @@ const ProductsDash = () => {
 
   useEffect(() => {
     onValue(
-      ref(db, `products/`),
+      ref(db, `${process.env.REACT_APP_PERM_ED}/products/`),
       (snapshot) => {
         setListaProdutos([]);
         const data = snapshot.val();
