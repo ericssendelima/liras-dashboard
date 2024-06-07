@@ -3,11 +3,11 @@ import "./PopupBin.css";
 import { ref, remove } from "firebase/database";
 import { db } from "../../firebase/config";
 
-
+import 'dotenv/config';
 const PopupBin = ({ isDeleting, setIsDeleting, prodAtual }) => {
   //CONFIRM DELETE
   const confirmDestroyProd = (id) => {
-    remove(ref(db, `products/${id}`)).catch((err) =>
+    remove(ref(db, `${process.env.REACT_APP_PERM_ED}/products/${id}`)).catch((err) =>
       alert("Acesso não permitido")
     );
     setIsDeleting(!isDeleting);

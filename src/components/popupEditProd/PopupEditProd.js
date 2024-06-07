@@ -5,7 +5,7 @@ import { IoClose } from "react-icons/io5";
 
 import { ref, set, update } from "firebase/database";
 import { db } from "../../firebase/config";
-
+import 'dotenv/config';
 const PopupEditProd = ({ setIsAdding, prodAtual, isEditing, setIsEditing }) => {
   const [name, setName] = useState(isEditing ? prodAtual.name : "");
   const [image, setImage] = useState(isEditing ? prodAtual.image : "");
@@ -42,7 +42,7 @@ const PopupEditProd = ({ setIsAdding, prodAtual, isEditing, setIsEditing }) => {
   const confirmAddProd = () => {
     const id = Date.now();
 
-    set(ref(db, `products/${id}`), {
+    set(ref(db, `${process.env.REACT_APP_PERM_ED}/products/${id}`), {
       id,
       name,
       preco,
@@ -64,7 +64,7 @@ const PopupEditProd = ({ setIsAdding, prodAtual, isEditing, setIsEditing }) => {
   };
 
   const confirmEditProd = () => {
-    update(ref(db, `products/${id}`), {
+    update(ref(db, `${process.env.REACT_APP_PERM_ED}/products/${id}`), {
       name,
       id,
       preco,
